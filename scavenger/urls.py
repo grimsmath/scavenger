@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, reverse_lazy, include
 from django.views.generic.base import RedirectView
-from scavenger import views
+from signup import views
 
 admin.site.site_header = 'Scavenger Signup'
 
