@@ -1,7 +1,7 @@
-from django.shortcuts import redirect
+from django.views.generic.base import RedirectView
 
 # Create your views here.
 
 
-def index_view(request):
-    return redirect('admin/')
+class IndexView(RedirectView):
+    url = 'admin/'
