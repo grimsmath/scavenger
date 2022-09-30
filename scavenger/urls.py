@@ -21,7 +21,7 @@ from signup import views
 admin.site.site_header = 'Scavenger Signup'
 
 urlpatterns = [
-    path('/scavenger', views.IndexView.as_view()),
     # path('', RedirectView.as_view(url=reverse_lazy('admin:index'))),
-    path('/scavenger/admin/', admin.site.urls),
+    path('', views.IndexView.as_view()),
+    path('admin/', admin.site.urls),
 ]
