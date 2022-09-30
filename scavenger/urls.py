@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, reverse_lazy, include
 from django.views.generic.base import RedirectView
+from scavenger import views
 
 admin.site.site_header = 'Scavenger Signup'
 
 urlpatterns = [
-    path('', RedirectView.as_view(url=reverse_lazy('admin:index'))),
+    path('', views.IndexView.as_view(), name='index'),
+    # path('', RedirectView.as_view(url=reverse_lazy('admin:index'))),
     path('admin/', admin.site.urls),
 ]
