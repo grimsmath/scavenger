@@ -4,4 +4,4 @@ from django.views.generic.base import RedirectView
 
 
 class IndexView(RedirectView):
-    url = 'admin/'
+    url = '/admin/'
