@@ -21,6 +21,5 @@ admin.site.site_header = 'Scavenger Signup'
 
 urlpatterns = [
     path('', RedirectView.as_view(url=reverse_lazy('admin:index'))),
-    path('grappelli/', include('grappelli.urls')),  # grappelli URLS
     path('admin/', admin.site.urls),
 ]
